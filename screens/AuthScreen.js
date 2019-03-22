@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Platform } from 'react-native';
 
 
 class AuthScreen extends Component {
     render(){
         return(
-            <View>
+            <View
+            style={{
+                marginTop: Platform.OS === 'android' ? 40 : 0
+            }}
+            >
                 <Text>AuthScreen</Text>
                 <Text>AuthScreen</Text>
                 <Text>AuthScreen</Text>
