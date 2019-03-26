@@ -18,9 +18,14 @@ export default class App extends React.Component {
   render() {
     const MainNavigator = createBottomTabNavigator(
       {
-        welcome: WelcomeScreen,
-        auth: AuthScreen,
+        welcome: { screen: WelcomeScreen,
+                  navigationOptions: { tabBarVisible: false }
+                },
+        auth: { screen: AuthScreen,
+               navigationOptions:{ tabBarVisible: false }
+              },
         main: {
+          navigationOptions: { tabBarVisible: false },
           screen: createBottomTabNavigator({
               map: MapScreen,
               deck: DeckScreen,
@@ -32,12 +37,11 @@ export default class App extends React.Component {
             }
           })
         }  
-       }
-      );
+       });
     const AppContainer = createAppContainer(MainNavigator);
 
     return (
-      <Provider store={store}>
+      <Provider store={store}> 
         <AppContainer />
       </Provider>  
     );
