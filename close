@@ -1,0 +1,41 @@
+[33mcommit 1a19931098b0c3180010cf58303575ec9879df2d[m[33m ([m[1;36mHEAD -> [m[1;32mfacebookAuth[m[33m, [m[1;31morigin/facebookAuth[m[33m)[m
+Author: Ruslan <rasel579@gmail.com>
+Date:   Sat Mar 23 00:01:54 2019 +0500
+
+    made an action with async/await syntax
+
+[33mcommit b38094ebd81d5374de94294b14320b779e6f86da[m
+Author: Ruslan <rasel579@gmail.com>
+Date:   Fri Mar 22 22:36:29 2019 +0500
+
+    added first action auth_actions
+
+[33mcommit 2ad3ae744ddfa32730f5b0383c7e47f5034d20e0[m
+Author: Ruslan <rasel579@gmail.com>
+Date:   Fri Mar 22 22:22:43 2019 +0500
+
+    setted up Redux
+
+[33mcommit 9bfc280c2a0037f28140aafa7d829789761c7266[m[33m ([m[1;31morigin/navigationScreen[m[33m, [m[1;32mnavigationScreen[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Ruslan <rasel579@gmail.com>
+Date:   Fri Mar 22 21:20:09 2019 +0500
+
+    Added navigation and make a WelcomeScreen
+
+[33mcommit 21abb48a8f0c9e220606393dad70979d6223e92e[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Ruslan <rasel579@gmail.com>
+Date:   Fri Mar 22 14:09:18 2019 +0500
+
+    Added React Navigation Router to WelcomeScreen and AuthScreen
+
+[33mcommit 579f6204930ae8b8c11408008345e851a2c53972[m
+Author: Ruslan <rasel579@gmail.com>
+Date:   Fri Mar 22 12:54:30 2019 +0500
+
+    Setted some new components with bilerplate
+
+[33mcommit bcb7a3809783e258ee26e9d55041f8c92e5de945[m
+Author: Ruslan <rasel579@gmail.com>
+Date:   Thu Mar 21 23:36:44 2019 +0500
+
+    start new project
