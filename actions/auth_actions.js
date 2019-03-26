@@ -28,5 +28,5 @@ export const facebookLogin = () => async  dispatch => {
          } 
 
          await AsyncStorage.setItem('fb_token', token);
-         dispatch({type: FACEBOOK_LOGIN_SUCCESS, payload: toke });
+         dispatch({type: FACEBOOK_LOGIN_SUCCESS, payload: token });
     }

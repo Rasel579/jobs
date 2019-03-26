@@ -9,8 +9,20 @@ import * as actions from '../actions';
 class AuthScreen extends Component {
     componentDidMount(){
         this.props.facebookLogin();
-        AsyncStorage.removeItem('fb_token');
+       this.onAuthComplete(this.props);
     }
+
+
+    componentWillReceiveProps(nextPorps){
+        this.onAuthComplete(nextPorps);
+    }
+    
+    onAuthComplete(props){
+        if (props.token){
+            this.props.navigation.navigate('map');
+            }
+    }
+
     render(){
         console.log(this.props);
         return(
@@ -19,17 +31,14 @@ class AuthScreen extends Component {
                 marginTop: Platform.OS === 'android' ? 40 : 0
             }}
             >
-                <Text>AuthScreen</Text>
-                <Text>AuthScreen</Text>
-                <Text>AuthScreen</Text>
-                <Text>AuthScreen</Text>
-                <Text>AuthScreen</Text>
-                <Text>AuthScreen</Text>
             </View>
         );
     }
 }
 
+const mapStateToProps = ({ auth }) => {
+    return { token: auth.token };
+};
 
 
-export default connect(null, actions)(AuthScreen);
+export default connect(mapStateToProps, actions)(AuthScreen); 
