@@ -9,7 +9,7 @@ const GITHUB_ADDRESS = "https://authenticjobs.com/api/?";
 const JOB_QUERY_PARAMS = {
   api_key: "e9a8fa8109bf3e0a6ef582bd81b6e176",
   method: "aj.jobs.search",
-  perpage: "10",
+  perpage: "1",
   format: "json",
   keywords: "javascript"
 };
