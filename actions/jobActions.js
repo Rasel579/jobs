@@ -1,7 +1,7 @@
 import axios from "axios";
 import qs from "qs";
  
-import { FETCH_JOBS } from "./types";
+import { FETCH_JOBS, LIKED_JOB } from "./types";
 import locationify from "./tools/locationify";
  
 const GITHUB_ADDRESS = "https://authenticjobs.com/api/?";
@@ -40,4 +40,11 @@ export const fetchJobs = (region, distance = 10) => async dispatch => {
   } catch (e) {
     console.log("fetchJobs ACTION ERROR:", e.message);
   }
+};
+
+export const likedJob = (job) => {
+    return {
+       payload: job,
+       type: LIKED_JOB
+    };
 };
