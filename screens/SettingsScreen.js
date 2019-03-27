@@ -6,6 +6,11 @@ import * as actions from '../actions';
 
 
 class SettingsScreen extends Component {
+    static navigationOption = ({navigation}) =>{
+        return {
+            title: 'Settings'
+        }
+    }
     render(){
         return(
             <View>

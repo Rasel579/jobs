@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { View, Text, Platform, ScrollView, Linking } from 'react-native';
-import { Button, Card } from 'react-native-elements';
+import { Button, Card, Icon } from 'react-native-elements';
 import { MapView } from 'expo';
 import { connect } from 'react-redux';
 
 
 class ReviewScreen extends Component {
     
-    static navigationOptions = ({navigation}) => {
-           return  { 
-                 headerTitle: `Review Jobs`,
-                 headerBackTitle: 'A much too long text for back button from B to A',
-                 headerTruncatedBackTitle: 'Back',
+    static navigationOptions = ({navigation}) => ({ 
+                 title: `Review Jobs`,
+                 tabBarLabel: 'Review Jobs',
                  headerRight: (
                      <Button 
                      title="Settings" 
@@ -19,9 +17,12 @@ class ReviewScreen extends Component {
                       type='outline'
                      />
                  ),
+                 tabBarLabel: ({ tintColor }) => {
+                    return <Icon name="favorite" size={30} color={tintColor} title="Review" />
+                 }
                  
-       }
-    };
+       });
+    
 
     renderLikedJobs(){
         return this.props.likes.map(job => {
