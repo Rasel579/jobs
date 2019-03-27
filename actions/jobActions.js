@@ -1,7 +1,7 @@
 import axios from "axios";
 import qs from "qs";
  
-import { FETCH_JOBS, LIKED_JOB } from "./types";
+import { FETCH_JOBS, LIKED_JOB, CLEAR_LIKED_JOBS } from "./types";
 import locationify from "./tools/locationify";
  
 const GITHUB_ADDRESS = "https://authenticjobs.com/api/?";
@@ -48,3 +48,7 @@ export const likedJob = (job) => {
        type: LIKED_JOB
     };
 };
+
+export const clearLikedJobs = () => {
+    return {type: CLEAR_LIKED_JOBS };
+}
