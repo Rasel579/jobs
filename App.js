@@ -10,12 +10,15 @@ import WelcomeScreen from './screens/WelcomeScreen';
 import MapScreen from './screens/MapScreen';
 import DeckScreen from './screens/DeckScreen';
 import ReviewScreen from './screens/ReviewScreen';
-import SettingsScreen from './screens/SettingsScreen'; 
+import SettingsScreen from './screens/SettingsScreen';
+import registerForNotification from './services/push_notification'; 
 
 
 export default class App extends React.Component {
 
-  
+  componentDidMount(){
+    registerForNotification();
+  }
   render() {
     const MainNavigator = createBottomTabNavigator(
       {
