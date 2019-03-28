@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Expo, { Notifications } from 'expo';
+import { StyleSheet, Text, View, Alert } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { createAppContainer, createBottomTabNavigator, createStackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
@@ -18,7 +19,19 @@ export default class App extends React.Component {
 
   componentDidMount(){
     registerForNotification();
+    Notifications.addListener((notification) => {
+      const { data: { text }, origin } = notification;
+      if(origin === 'recieved' && text){
+       Alert.alert(
+          "New Push Notification",
+          text,
+          [{text: 'OK'}]
+
+       );
+      }
+    });
   }
+
   render() {
     const MainNavigator = createBottomTabNavigator(
       {

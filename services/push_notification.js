@@ -1,13 +1,13 @@
 import { Permissions, Notifications } from 'expo';
 import { AsyncStorage } from 'react-native';
 import axios from 'axios';
-import { asyncLocalStorage } from 'redux-persist/storages';
 
 const PUSH_ENDPOINT = 'http://rallycoding.herokuapp.com/api/tokens';
 
 
 export default async () => {
- let previousToken = await  asyncLocalStorage.getItem('pushtoken');
+ let previousToken = await  AsyncStorage.getItem('pushtoken');
+ console.log(previousToken);
  if (previousToken){
      return;
  } else {
